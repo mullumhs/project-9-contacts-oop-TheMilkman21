@@ -32,6 +32,10 @@ class Contact:
         else:
             print("bad")
             return False
+        
+        
+    def __str__(self):
+        return self.name
     
     @classmethod
     def get_contact_count(cls):
@@ -40,12 +44,11 @@ class Contact:
 
 
 contact1 = Contact("rocco", "0412345678", "rocco@realemail.com")
-contact1 = Contact("Michael-Jackson", "0412345678", "Michael-Jackson@realemail.com")
+contact2 = Contact("Michael-Jackson", "0412345678", "Michael-Jackson@realemail.com")
 
 
 
-Contact.check_email()
-Contact.get_contact_count()
+
 
 
 

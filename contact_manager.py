@@ -17,11 +17,11 @@ class ContactManager:
         new_contact = Contact(name, email, phone)
         self.contacts.append(new_contact)
         print(f"Added new contact: {name}")
+        
 
     def display_contacts(self):
-        # TODO: Implement this method to print all contact details.
-        # You may choose to create a __str__ method in the Contact class or implement this method here.
-        pass # Then, remove this line.
+        for contact in self.contacts:
+            print(contact)
 
     # The parameter 'name' is used to identify the contact to update.
     # The parameters 'new_email' and 'new_phone' are optional and can be used to update the contact's email and phone.
