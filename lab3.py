@@ -18,9 +18,9 @@
 class Contact:
     number_of_contacts = 0
     
-    def __inti__(self, name, phone_number, email):
+    def __init__(self, name, email, phone):
         self.name = name 
-        self.phone_number = phone_number
+        self.phone = phone
         self.email = email
         Contact.number_of_contacts += 1
         
@@ -35,7 +35,7 @@ class Contact:
         
         
     def __str__(self):
-        return self.name
+        return (f"{self.name}, {self.email}, {self.phone}")
     
     @classmethod
     def get_contact_count(cls):
@@ -43,8 +43,8 @@ class Contact:
         return Contact.number_of_contacts
 
 
-contact1 = Contact("rocco", "0412345678", "rocco@realemail.com")
-contact2 = Contact("Michael-Jackson", "0412345678", "Michael-Jackson@realemail.com")
+contact1 = Contact("rocco", "rocco@realemail.com", "0412345678")
+contact2 = Contact("Michael-Jackson", "Michael-Jackson@realemail.com", "0412345678")
 
 
 
